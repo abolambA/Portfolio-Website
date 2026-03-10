@@ -6,7 +6,8 @@ const { Resend } = require('resend');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Email form handling via Resend
+
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(cors());
@@ -16,7 +17,8 @@ app.post('/api/send-email', async (req, res) => {
     try {
         const { name, email, subject, message } = req.body;
 
-        // Send the email to the primary contact
+
+
         const data = await resend.emails.send({
             from: 'Contact Form <onboarding@resend.dev>',
             to: ['mn121529@gmail.com'], // Deliver to the user's email

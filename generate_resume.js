@@ -14,20 +14,23 @@ const italicFont = 'Helvetica-Oblique';
 const primaryColor = '#000000';
 const secondaryColor = '#333333';
 
-// Helper function for dividers
+
+
 function drawDivider() {
     doc.moveTo(doc.x, doc.y).lineTo(doc.page.width - 50, doc.y).strokeColor('#cccccc').stroke().strokeColor(primaryColor);
     doc.moveDown(0.5);
 }
 
-// Helper function for section titles
+
+
 function addSectionHeader(title) {
     doc.moveDown(0.5);
     doc.font(boldFont).fontSize(14).fillColor(primaryColor).text(title.toUpperCase());
     drawDivider();
 }
 
-// Helper function for job titles
+
+
 function addExperienceHeader(title, company, date, location) {
     doc.font(boldFont).fontSize(12).fillColor(primaryColor).text(title, { continued: true });
     doc.font(primaryFont).text(` | ${company} `, { continued: true });
@@ -36,7 +39,8 @@ function addExperienceHeader(title, company, date, location) {
     doc.moveDown(0.3);
 }
 
-// Helper function for bullet points
+
+
 function addBullet(text) {
     doc.font(primaryFont).fontSize(10).fillColor(secondaryColor).text(`• ${text}`, {
         lineGap: 3,
@@ -44,7 +48,8 @@ function addBullet(text) {
     });
 }
 
-// ---------------- HEADER ----------------
+
+
 doc.font(boldFont).fontSize(24).fillColor(primaryColor).text('Mohamad Nihad Alsufe', { align: 'center' });
 doc.font(primaryFont).fontSize(12).fillColor(secondaryColor).text('CEO & CTO | AI Systems Architect | Full-Stack Engineer', { align: 'center' });
 doc.moveDown(0.4);
@@ -59,14 +64,16 @@ doc.fillColor('#0066cc').text(
 );
 doc.fillColor(primaryColor);
 
-// ---------------- SUMMARY ----------------
+
+
 addSectionHeader('Professional Summary');
 doc.font(primaryFont).fontSize(10).fillColor(secondaryColor).text(
     'Visionary technical leader and AI Systems Architect with extensive experience in designing and deploying fast, highly-scalable, production-level infrastructures. As the CEO and CTO of Organic Vision AI, I bridge the gap between business strategy and deep-tech engineering, architecting multi-agent LLM systems, developing cross-platform applications, and pioneering integrations in humanoid robotics and intelligent automation. Proven track record of delivering enterprise-grade cloud backends, engaging in high-stakes hackathons, and fostering technology communities across the Middle East.',
     { align: 'justify', lineGap: 3 }
 );
 
-// ---------------- EXPERIENCE ----------------
+
+
 addSectionHeader('Professional Experience');
 
 addExperienceHeader('CEO & CTO & AI Systems Architect', 'Organic Vision AI', 'Present', 'Sharjah, UAE');
@@ -82,7 +89,8 @@ addBullet('Founded and scaled the national competitive speedcubing community fro
 addBullet('Nationally ranked #4 competitive speedcuber in Syria.');
 addBullet('Appointed as the official Middle East brand representative for Cubuzzle, managing regional partnerships and technical brand integrations.');
 
-// ---------------- PROJECTS & ENGINEERING INITIATIVES ----------------
+
+
 addSectionHeader('Key Technical Initiatives');
 doc.font(boldFont).fontSize(11).fillColor(primaryColor).text('NearSchool — Production EdTech Architecture');
 doc.moveDown(0.2);
@@ -95,7 +103,8 @@ doc.moveDown(0.2);
 addBullet('Engineered multi-tenant intelligence engines capable of autonomous campaign ideation, scheduling, and brand-safe content delivery without human intervention.');
 addBullet('Created proprietary orchestration scripts utilizing Model Context Protocol (MCP), Python, Flowise, and n8n to connect diverse APIs with deterministic LLM behaviors.');
 
-// ---------------- SKILLS ----------------
+
+
 addSectionHeader('Technical Skills & Expertise');
 
 const skillsX = doc.x;
@@ -122,9 +131,11 @@ doc.moveDown(0.5);
 doc.font(boldFont).fillColor(primaryColor).text('Languages:', skillsX);
 doc.font(primaryFont).fillColor(secondaryColor).text('Arabic (Native) • English (C2/Bilingual) • Turkish (B2) • German (B1)', skillsX + 110, doc.y - 12);
 
-// ---------------- CERTIFICATIONS & AWARDS ----------------
+
+
 doc.moveDown(1.5);
-doc.x = 50; // Reset X
+
+
 addSectionHeader('Certifications, Awards & Developer Programs');
 doc.font(primaryFont).fontSize(10).fillColor(secondaryColor);
 
@@ -143,6 +154,7 @@ const certs = [
 
 certs.forEach(cert => addBullet(cert));
 
-// Finalize PDF file
+
+
 doc.end();
 console.log("Extended ATS Resume generated successfully at certs/Mohamad_Nihad_Alsufe_Resume.pdf");

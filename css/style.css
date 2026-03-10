@@ -1,4 +1,3 @@
-/* Base Tokens */
 :root {
   --bg: #060810;
   --bg2: #0a0d14;
@@ -38,7 +37,8 @@ body {
   cursor: none;
 }
 
-/* CURSOR */
+
+
 .cursor {
   position: fixed;
   width: 10px;
@@ -64,7 +64,8 @@ body {
   transition: all .12s ease;
 }
 
-/* SCANLINES */
+
+
 body::before {
   content: '';
   position: fixed;
@@ -74,7 +75,8 @@ body::before {
   z-index: 999;
 }
 
-/* GRID */
+
+
 .grid-bg {
   position: fixed;
   inset: 0;
@@ -94,7 +96,8 @@ body::before {
   opacity: .55;
 }
 
-/* Navigation Styles */
+
+
 nav {
   position: fixed;
   top: 0;
@@ -218,7 +221,8 @@ nav.scrolled {
   box-shadow: 0 6px 20px rgba(34, 211, 238, .3);
 }
 
-/* Hero Section Styles */
+
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -582,7 +586,8 @@ nav.scrolled {
   transform: rotate(180deg);
 }
 
-/* Stats Rail Styles */
+
+
 .stats-wrap {
   position: relative;
   z-index: 1;
@@ -648,7 +653,8 @@ nav.scrolled {
   letter-spacing: .02em;
 }
 
-/* Generic Section Layouts */
+
+
 .section {
   position: relative;
   z-index: 1;
@@ -709,7 +715,8 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* About Section Component */
+
+
 .about-layout {
   display: grid;
   grid-template-columns: 1.15fr .85fr;
@@ -818,7 +825,8 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* Company Section Styles */
+
+
 .ov-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -998,7 +1006,8 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* OV SERVICE TILES */
+
+
 .ov-services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1029,7 +1038,8 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* Achievement Cards & Grid */
+
+
 .ach-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1075,7 +1085,8 @@ nav.scrolled {
   opacity: 1;
 }
 
-/* cert badge overlay hint */
+
+
 .ach-card[data-cert]::after {
   content: 'View Certificate ↗';
   position: absolute;
@@ -1195,7 +1206,8 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* Portfolio / Project Showcase */
+
+
 .build-header {
   display: flex;
   align-items: flex-end;
@@ -1357,7 +1369,8 @@ nav.scrolled {
   color: var(--amber);
 }
 
-/* Skills & Capabilities */
+
+
 .skills-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1450,7 +1463,8 @@ nav.scrolled {
   background: rgba(124, 58, 237, .12);
 }
 
-/* Contact Form & Icons */
+
+
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -1476,7 +1490,8 @@ nav.scrolled {
   margin-bottom: 36px;
 }
 
-/* ICON-ONLY CONTACT ROW */
+
+
 .contact-icons {
   display: flex;
   gap: 12px;
@@ -1544,7 +1559,8 @@ nav.scrolled {
   background: rgba(16, 185, 129, .06);
 }
 
-/* TOOLTIP */
+
+
 .ci-btn::after {
   content: attr(data-tip);
   position: absolute;
@@ -1569,7 +1585,8 @@ nav.scrolled {
   opacity: 1;
 }
 
-/* FORM */
+
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -1632,7 +1649,8 @@ nav.scrolled {
   box-shadow: 0 10px 28px rgba(34, 211, 238, .3);
 }
 
-/* Page Footer */
+
+
 footer {
   border-top: 1px solid var(--border);
   padding: 36px 56px;
@@ -1682,7 +1700,8 @@ footer {
   color: var(--cyan);
 }
 
-/* Animation Classes */
+
+
 .sr {
   opacity: 0;
   transform: translateY(36px);
@@ -1722,7 +1741,8 @@ footer {
   transition-delay: .33s;
 }
 
-/* Responsive Layouts */
+
+
 @media(max-width:1024px) {
   .build-grid {
     grid-template-columns: repeat(2, 1fr);

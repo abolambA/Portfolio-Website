@@ -1,4 +1,5 @@
-// Custom Cursor Logic
+
+
 const cur = document.getElementById('cur');
 const ring = document.getElementById('curRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
@@ -21,7 +22,8 @@ function animateRing() {
 }
 animateRing();
 
-// Cursor Hover Effects
+
+
 document.querySelectorAll('a, button, .build-tile, .ach-card, .micro-card').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cur.style.transform = 'translate(-50%, -50%) scale(2.5)';
@@ -38,7 +40,8 @@ document.querySelectorAll('a, button, .build-tile, .ach-card, .micro-card').forE
   });
 });
 
-// Background Particle System
+
+
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 let W, H;
@@ -52,7 +55,8 @@ function initBackground() {
 initBackground();
 window.addEventListener('resize', initBackground);
 
-// Create initial points
+
+
 for (let i = 0; i < 70; i++) {
   pts.push({
     x: Math.random() * W,
@@ -80,7 +84,8 @@ function renderParticles() {
     ctx.fill();
   });
 
-  // Draw connections
+
+
   for (let i = 0; i < pts.length; i++) {
     for (let j = i + 1; j < pts.length; j++) {
       const dx = pts[i].x - pts[j].x;
@@ -102,7 +107,8 @@ function renderParticles() {
 renderParticles();
 
 
-// Scroll-based Header Styling
+
+
 const navbar = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) {
@@ -112,7 +118,8 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Scroll Reveal Observer
+
+
 const revealElements = document.querySelectorAll('.sr');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -127,7 +134,8 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// Staggered Tile Entry
+
+
 const buildTiles = document.querySelectorAll('.build-tile');
 const tileObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -146,7 +154,8 @@ const tileObserver = new IntersectionObserver((entries) => {
 
 buildTiles.forEach(tile => tileObserver.observe(tile));
 
-// Navigation Link Activity Tracking
+
+
 const primaryNavLinks = document.querySelectorAll('.nav-center a');
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -162,7 +171,8 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[id]').forEach(section => sectionObserver.observe(section));
 
-// Handle Certificate Clicks
+
+
 function openCert(element) {
   const certificatePath = element.getAttribute('data-cert');
   if (certificatePath) {
@@ -170,7 +180,8 @@ function openCert(element) {
   }
 }
 
-// Contact Form Submission
+
+
 const contactFormElement = document.getElementById('contactForm');
 if (contactFormElement) {
   contactFormElement.addEventListener('submit', async (event) => {
@@ -209,7 +220,8 @@ if (contactFormElement) {
       submitBtn.style.background = 'var(--rose)';
     }
 
-    // Reset button state
+
+
     setTimeout(() => {
       submitBtn.textContent = defaultBtnText;
       submitBtn.style.background = '';
@@ -218,7 +230,8 @@ if (contactFormElement) {
   });
 }
 
-// Animated Statistics Counter
+
+
 const countElements = document.querySelectorAll('.stat-num');
 const countObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
