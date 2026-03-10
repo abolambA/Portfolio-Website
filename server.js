@@ -6,8 +6,7 @@ const { Resend } = require('resend');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Initialize Resend
-// Note: You must provide your own API key in a .env file.
+// Email form handling via Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(cors());
@@ -17,8 +16,7 @@ app.post('/api/send-email', async (req, res) => {
     try {
         const { name, email, subject, message } = req.body;
 
-        // Default 'from' address must be associated with your verified domain in Resend
-        // or onboarding@resend.dev for testing.
+        // Send the email to the primary contact
         const data = await resend.emails.send({
             from: 'Contact Form <onboarding@resend.dev>',
             to: ['mn121529@gmail.com'], // Deliver to the user's email

@@ -1,6 +1,4 @@
-/* ══════════════════════════════════════
-   TOKENS
-══════════════════════════════════════ */
+/* Base Tokens */
 :root {
   --bg: #060810;
   --bg2: #0a0d14;
@@ -96,9 +94,7 @@ body::before {
   opacity: .55;
 }
 
-/* ══════════════════════════════════════
-   NAV
-══════════════════════════════════════ */
+/* Navigation Styles */
 nav {
   position: fixed;
   top: 0;
@@ -222,9 +218,7 @@ nav.scrolled {
   box-shadow: 0 6px 20px rgba(34, 211, 238, .3);
 }
 
-/* ══════════════════════════════════════
-   HERO
-══════════════════════════════════════ */
+/* Hero Section Styles */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -588,9 +582,7 @@ nav.scrolled {
   transform: rotate(180deg);
 }
 
-/* ══════════════════════════════════════
-   STATS
-══════════════════════════════════════ */
+/* Stats Rail Styles */
 .stats-wrap {
   position: relative;
   z-index: 1;
@@ -656,9 +648,7 @@ nav.scrolled {
   letter-spacing: .02em;
 }
 
-/* ══════════════════════════════════════
-   SECTION SYSTEM
-══════════════════════════════════════ */
+/* Generic Section Layouts */
 .section {
   position: relative;
   z-index: 1;
@@ -719,9 +709,7 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* ══════════════════════════════════════
-   ABOUT
-══════════════════════════════════════ */
+/* About Section Component */
 .about-layout {
   display: grid;
   grid-template-columns: 1.15fr .85fr;
@@ -830,9 +818,7 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* ══════════════════════════════════════
-   ORGANIC VISION
-══════════════════════════════════════ */
+/* Company Section Styles */
 .ov-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1043,9 +1029,7 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* ══════════════════════════════════════
-   ACHIEVEMENTS
-══════════════════════════════════════ */
+/* Achievement Cards & Grid */
 .ach-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1211,9 +1195,7 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* ══════════════════════════════════════
-   WHAT I CAN BUILD
-══════════════════════════════════════ */
+/* Portfolio / Project Showcase */
 .build-header {
   display: flex;
   align-items: flex-end;
@@ -1375,9 +1357,7 @@ nav.scrolled {
   color: var(--amber);
 }
 
-/* ══════════════════════════════════════
-   SKILLS
-══════════════════════════════════════ */
+/* Skills & Capabilities */
 .skills-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1470,9 +1450,7 @@ nav.scrolled {
   background: rgba(124, 58, 237, .12);
 }
 
-/* ══════════════════════════════════════
-   CONTACT
-══════════════════════════════════════ */
+/* Contact Form & Icons */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -1654,9 +1632,7 @@ nav.scrolled {
   box-shadow: 0 10px 28px rgba(34, 211, 238, .3);
 }
 
-/* ══════════════════════════════════════
-   FOOTER
-══════════════════════════════════════ */
+/* Page Footer */
 footer {
   border-top: 1px solid var(--border);
   padding: 36px 56px;
@@ -1706,9 +1682,7 @@ footer {
   color: var(--cyan);
 }
 
-/* ══════════════════════════════════════
-   SCROLL REVEAL
-══════════════════════════════════════ */
+/* Animation Classes */
 .sr {
   opacity: 0;
   transform: translateY(36px);
@@ -1748,9 +1722,7 @@ footer {
   transition-delay: .33s;
 }
 
-/* ══════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════ */
+/* Responsive Layouts */
 @media(max-width:1024px) {
   .build-grid {
     grid-template-columns: repeat(2, 1fr);
